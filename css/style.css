@@ -8,8 +8,10 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    background: linear-gradient(to right, #0000fff1, #77c6f7);
+}
 .container{
-    background: linear-gradient(to right, #5c5cea, #cb4848, #0000ff78);
     width: 100%;
 }
 nav{
@@ -18,22 +20,22 @@ nav{
     display: flex;
     justify-content: space-around;
     padding: 15px;
-    background: linear-gradient(to right, #6a6aee,  #cb4848, #0000ff78);
+    background-color: white;
 }
 .logo{
     display: flex;
     color: blue;
-    font-size: 30px;
+    font-size: 25px;
     text-transform: capitalize;
     cursor: pointer;
     font-style: italic;
 }
-.logo span{
+.logo p{
     color: blue;
     margin-left: -10px;
 }
 i{
-    color: blue;
+    color: rgb(5, 5, 70);
     margin-right: 20px;
     cursor: pointer;
 }
@@ -43,56 +45,42 @@ nav ul{
 nav li{
     list-style: none;
     margin-right: 40px;
-    font-size: 25px;
+    font-size: 20px;
     text-transform: capitalize;
 }
-nav a.active{
-    color: blue !important;
-    text-decoration: underline;
-}
 nav a{
-    color: white;
+    color: blue;
     text-decoration: none;
 }
 nav a:hover{
-    color: blue;
     text-decoration: underline;
 }
 #menu-icon {
     display: none;
     font-size: 30px;
-    color: white;
+    color: blue;
     cursor: pointer;
 }
-@media screen and (max-width: 768px) {
-    nav ul {
+@media only screen and (max-width: 600px) {
+    nav ul{
         display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: black;
         position: absolute;
-        top: 70px;
-        left: 0;
-        padding: 20px;
+        flex-direction: column;
+        background-color: white;
+        top: 50px;
+        right: 40px;
+        width: 35%;
+        padding: 10px;
+        border-radius: 10px;
     }
-
     nav ul.active {
         display: flex;
     }
-
-    nav li {
-        margin-bottom: 20px;
-        text-align: center;
+    nav i{
+        color: blue;
     }
-    #menu-icon {
+    #menu-icon{
         display: block;
-    }
-
-    nav {
-        justify-content: space-between;
-    }
-    nav ul li a {
-        font-size: 24px;
     }
 }
 
@@ -104,7 +92,7 @@ nav a:hover{
     margin-top: 30px;
 }
 .hero h1{
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 6%;
 }
 .hero p{
@@ -115,8 +103,8 @@ nav a:hover{
     margin: 5% 1%;
 }
 .hero span{
-    color: blue;
-    font-size: 60px;
+    color: rgb(5, 5, 78);
+    font-size: 50px;
 }
 .hero img{
     width: 350px;
@@ -131,16 +119,22 @@ nav a:hover{
     margin-top: 5%;
 }
 .rate span{
-    color: blue;
+    color: rgb(2, 2, 45);
     font-size: 30px;
 }
 .rate p{
     text-transform: capitalize;
 }
+@media only screen and (max-width: 600px) {
+    .hero{
+        display: block;
+    }
+}
 /*residences*/
 #residences{
     background-color: white;
     width: 100%;
+    margin-top: 5%;
 }
 #residences h2{
     color: blue;
@@ -149,7 +143,7 @@ nav a:hover{
     text-align: center;
     text-decoration: underline;
     margin-bottom: 5%;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 .houses {
     display: flex;
@@ -157,7 +151,7 @@ nav a:hover{
     width: 70%;
     height:fit-content;
     margin: 0 auto;
-    box-shadow: 0 0 20px gray
+    box-shadow: 0 0 20px gray;
 }
 .item1 {
     min-width: 100%; 
@@ -178,12 +172,12 @@ nav a:hover{
     padding: 0 1rem 0 .5rem;
 }
 .item1 i{
-    color: gold;
+    color:red;
 }
 .item1 p{
     font-size: 16px;
-    color: gray;
-    margin: 10px;
+    color: blue;
+    margin-top: 10px;
     text-transform: capitalize;
 }
 .item1:hover{
@@ -205,6 +199,12 @@ nav a:hover{
     border-radius: 5px;
     cursor: pointer;
     margin-right: 20px;
+    margin-bottom: 5%;
+}
+@media only screen and (max-width: 600px) {
+    .item1 img{
+        width: 90%;
+    }
 }
 /*value*/
 #value{
@@ -213,7 +213,7 @@ nav a:hover{
     justify-content: space-between;
     margin-top: 10%;
     padding: 20px;
-    background: linear-gradient(to right, #0000fff1, #77c6f7);
+    background-color: white;
 }
 #value .section1 img{
     width: 400px;
@@ -230,12 +230,27 @@ nav a:hover{
     text-transform: capitalize;
 }
 .section2 p{
-    color:white;
+    color:blue;
     font-size: 16px;
     word-spacing: 2px;
     text-transform: capitalize;
     line-height: 1.5;
     margin-top: 5%;
+}
+@media only screen and (max-width: 600px) {
+    #value{
+        display: block;
+        text-align: center;
+    }
+    #value .section1 img{
+        width: 90%;
+    }
+    .section2 h3{
+        font-size: 30px;
+    }
+    .section2 p{
+        font-size: 20px;
+    }
 }
 /*contact*/
 #contact{
@@ -244,8 +259,8 @@ nav a:hover{
     justify-content: space-between;
     margin-top: 10%;
     padding: 20px;
-    background: linear-gradient(to right, #0000ff, #cb4848, #0000ff78);
     border-radius: 20px;
+    background-color: white;
 }
 #contact .content1 img{
     width: 450px;
@@ -263,7 +278,7 @@ nav a:hover{
     padding: 10%;
 }
 #contact .content2 p{
-    color:white;
+    color:blue;
     font-size: 16px;
     word-spacing: 2px;
     text-transform: capitalize;
@@ -296,7 +311,7 @@ nav a:hover{
 }
 .information i{
     font-size: 20px;
-    color: goldenrod;
+    color: red;
 }
 .information span{
     color: blue;
@@ -304,11 +319,11 @@ nav a:hover{
     font-size: 16px;
 }
 .information button{
-    color:blue;
     padding: 10px;
     border-radius: 10px;
-    outline: none;
+    border: none;
     font-size: 11px;
+    color: blue;
 }
 .information button:hover{
     font-size: 14px;
@@ -316,12 +331,23 @@ nav a:hover{
     background-color: blue;
     color: white;
 }
+@media only screen and (max-width: 600px) {
+    #contact{
+        display: block;
+        text-align: center;
+    }
+    #contact .content1 img{
+        width: 90%;
+    }
+    .content2 h3{
+        font-size: 25px;
+    }
+}
 /*get start*/
 .start{
     width: 80%;
     text-align: center;
-    background: linear-gradient(to right, #0000fff1, #77c6f7);
-    color: white;
+    background-color: white;
     border: 1px solid blue;
     border-radius: 20px;
     padding: 20px;
@@ -331,6 +357,7 @@ nav a:hover{
     font-size: 40px;
     margin: 5%;
     text-transform: capitalize;
+    color: rgb(8, 8, 160);
 }
 .start p{
     font-size: 20px;
@@ -338,25 +365,33 @@ nav a:hover{
     margin: 5%;
     text-transform: capitalize;
     color: rgba(255, 255, 255, 0.789);
+    color: rgb(39, 39, 206);
 }
 .start button{
-    border: 1px solid white;
+    border: 1px solid blue;
     border-radius: 10px;
     padding: 10px;
+    border: none;
     text-transform: capitalize;
-    background-color: rgba(255, 255, 255, 0.396);
+    color:rgb(15, 15, 176);
+    background-color: rgba(88, 67, 207, 0.396);
 }
 .start button:hover{
-    color: blue;
+    color: white;
     font-weight: bold;
-    background-color: white;
+    background-color: blue;
     cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .start h4{
+        font-size: 30px;
+    }
 }
 /*end*/
 .end{
     width: 100%;
     height: fit-content;
-    background: linear-gradient(to right, #0000fff1, #77c6f7);
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(5 ,1fr);
     gap: 20px;
@@ -364,14 +399,14 @@ nav a:hover{
 }
 .logo-end span{
     width: 300px;
-    color: rgba(183, 183, 231, 0.988);
+    color: rgba(13, 13, 93, 0.988);
     font-size: 25px;
     font-weight: bold;
     font-style: italic;
     margin-bottom: 20px;
 }
 .end h4{
-    color: white;
+    color: rgb(15, 15, 142);
     font-size: 20px;
     margin-bottom: 20px;
     font-weight: 400;
@@ -379,14 +414,14 @@ nav a:hover{
 }
 .end p{
     margin-top: 15px;
-    color: white;
+    color: rgb(20, 20, 184);
     font-size: 16px;
     text-transform: capitalize;
     line-height: 1.5;
 }
 .end li{
     list-style: none;
-    color:white;
+    color:rgb(96, 96, 213);
     font-size: 16px;
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -399,6 +434,13 @@ nav a:hover{
     font-size: 20px;
     cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+    .end{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 footer{
     width: 100%;
 }
@@ -407,57 +449,7 @@ footer p{
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
-    color: #333;
+    color: #181818e9;
     opacity: 0.7;
 }
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .logo {
-        font-size: 30px;
-    }
-    .hero h1 {
-        font-size: 35px;
-    }
-    .hero p {
-        font-size: 18px;
-    }
-    .rate span {
-        font-size: 25px;
-    }
-    #residences h2, .section2 h3, .content2 h3, .start h4 {
-        font-size: 30px;
-    }
-    .start p {
-        font-size: 18px;
-    }
-    .start button {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero h1 {
-        font-size: 30px;
-    }
-    .rate {
-        flex-direction: column;
-        align-items: center;
-    }
-    .rate span {
-        font-size: 20px;
-    }
-    #residences h2, .section2 h3, .content2 h3 {
-        font-size: 25px;
-    }
-    .start {
-        padding: 15px;
-        margin: 5%;
-    }
-    .end {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .logo-end, .social {
-        text-align: center;
-    }
-}
